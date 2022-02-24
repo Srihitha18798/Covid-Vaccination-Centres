@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">CovidVaccinations</string>
+    <string name="enter_pin_code">Enter Pin Code</string>
+    <string name="search">Search</string>
+    <string name="center_name">Center Name</string>
+    <string name="center_location">Center Location</string>
+    <string name="center_timings">Center Timings</string>
+    <string name="vaccine_name">Vaccine Name</string>
+    <string name="fees">Fees</string>
+    <string name="age_limit">Age Limit</string>
+    <string name="availability">Availability</string>
 </resources>

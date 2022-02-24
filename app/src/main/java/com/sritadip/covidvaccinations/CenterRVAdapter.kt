@@ -6,9 +6,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class CenterRVAdapter(private val centerList:List<CenterRvModel>):RecyclerView.Adapter<CenterRVAdapter.CenterRVViewHolder>() {
+class CenterRVAdapter(private val centerList: List<CenterRvModel>) :
+    RecyclerView.Adapter<CenterRVAdapter.CenterRVViewHolder>() {
 
-    class CenterRVViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
+    class CenterRVViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val centerNameTV: TextView = itemView.findViewById(R.id.idTvCenterName)
         val centerAddressTV: TextView = itemView.findViewById(R.id.idTvCenterLocation)
@@ -21,19 +22,21 @@ class CenterRVAdapter(private val centerList:List<CenterRvModel>):RecyclerView.A
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CenterRVViewHolder {
-        val itemView=LayoutInflater.from(parent.context).inflate(R.layout.center_rv_item,parent,false)
+        val itemView =
+            LayoutInflater.from(parent.context).inflate(R.layout.center_rv_item, parent, false)
         return CenterRVViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: CenterRVViewHolder, position: Int) {
-        val center=centerList[position]
-        holder.centerNameTV.text=center.centerName
-        holder.centerAddressTV.text=center.centerAddress
-        holder.centerTimings.text=("From : "+center.centerFromTime+" To : "+center.centerToTime)
-        holder.vaccineNameTV.text=center.vaccineName
-        holder.centerFeeTypeTV.text=center.fee_type
-        holder.centerAgeLimitTV.text=("Age Limit : "+center.age_limit.toString())
-        holder.availabilityTV.text=("Availability : "+center.availableCapacity.toString())
+        val center = centerList[position]
+        holder.centerNameTV.text = center.centerName
+        holder.centerAddressTV.text = center.centerAddress
+        holder.centerTimings.text =
+            ("From : " + center.centerFromTime + " To : " + center.centerToTime)
+        holder.vaccineNameTV.text = center.vaccineName
+        holder.centerFeeTypeTV.text = center.fee_type
+        holder.centerAgeLimitTV.text = ("Age Limit : " + center.age_limit.toString())
+        holder.availabilityTV.text = ("Availability : " + center.availableCapacity.toString())
     }
 
     override fun getItemCount(): Int {

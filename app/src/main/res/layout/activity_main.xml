@@ -7,38 +7,38 @@
     tools:context=".MainActivity">
 
     <EditText
+        android:id="@+id/idPinCode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/idPinCode"
-        android:inputType="number"
-        android:hint="Enter Pin Code"
+        android:layout_margin="3dp"
         android:layout_toStartOf="@+id/idBtnSearch"
         android:layout_toLeftOf="@id/idBtnSearch"
-        android:layout_margin="3dp"></EditText>
+        android:hint="@string/enter_pin_code"
+        android:inputType="number" />
 
 
     <Button
+        android:id="@+id/idBtnSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Search"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_margin="3dp"
         android:padding="2dp"
-        android:layout_alignParentRight="true"
-        android:id="@+id/idBtnSearch"></Button>
+        android:text="@string/search" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRVCenters"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/idPinCode"
-        android:id="@+id/idRVCenters"></androidx.recyclerview.widget.RecyclerView>
+        android:layout_below="@id/idPinCode" />
 
     <ProgressBar
+        android:id="@+id/idPBLoading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:visibility="gone"
-        android:id="@+id/idPBLoading"></ProgressBar>
+        android:visibility="gone" />
 
 
 </RelativeLayout>
